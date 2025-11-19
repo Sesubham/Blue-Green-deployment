@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Environment - v2.0</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+        
+        .container {
+            text-align: center;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            max-width: 600px;
+        }
+        
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .version {
+            font-size: 1.5em;
+            margin: 20px 0;
+            padding: 10px 20px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            display: inline-block;
+        }
+        
+        .status {
+            margin: 30px 0;
+            font-size: 1.2em;
+        }
+        
+        .badge {
+            display: inline-block;
+            padding: 8px 16px;
+            background: #FF9800;
+            border-radius: 20px;
+            font-weight: bold;
+            margin: 10px;
+        }
+        
+        .info {
+            margin-top: 30px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            text-align: left;
+        }
+        
+        .info-item {
+            margin: 10px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .label {
+            font-weight: bold;
+        }
+        
+        .new-feature {
+            margin: 20px 0;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 10px;
+            border-left: 4px solid #FFD700;
+        }
+        
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.7;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🟢 Green Environment</h1>
+        <div class="version">Version 2.0</div>
+        
+        <div class="status">
+            <span class="badge pulse">● ACTIVE</span>
+        </div>
+        
+        <p style="margin: 20px 0; font-size: 1.1em;">
+            This is the <strong>GREEN</strong> deployment environment running the new version with exciting updates!
+        </p>
+        
+        <div class="new-feature">
+            <h3 style="margin-bottom: 10px;">✨ New in v2.0</h3>
+            <ul style="text-align: left; margin-left: 20px; line-height: 1.6;">
+                <li>Improved performance</li>
+                <li>Enhanced user interface</li>
+                <li>Bug fixes and optimizations</li>
+            </ul>
+        </div>
+        
+        <div class="info">
+            <div class="info-item">
+                <span class="label">Environment:</span>
+                <span>Green</span>
+            </div>
+            <div class="info-item">
+                <span class="label">Version:</span>
+                <span>2.0.0</span>
+            </div>
+            <div class="info-item">
+                <span class="label">Status:</span>
+                <span style="color: #4CAF50;">✓ Healthy</span>
+            </div>
+            <div class="info-item">
+                <span class="label">Deployment:</span>
+                <span>Blue-Green Strategy</span>
+            </div>
+        </div>
+        
+        <p style="margin-top: 30px; opacity: 0.8; font-size: 0.9em;">
+            Traffic successfully switched to the new version with zero downtime!
+        </p>
+    </div>
+    
+    <script>
+        // Auto-refresh every 5 seconds to see deployment changes
+        setInterval(() => {
+            const timestamp = document.getElementById('timestamp');
+            if (timestamp) {
+                timestamp.textContent = new Date().toLocaleTimeString();
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
+

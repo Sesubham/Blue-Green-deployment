@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blue Environment - v1.0</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+        
+        .container {
+            text-align: center;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            max-width: 600px;
+        }
+        
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .version {
+            font-size: 1.5em;
+            margin: 20px 0;
+            padding: 10px 20px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            display: inline-block;
+        }
+        
+        .status {
+            margin: 30px 0;
+            font-size: 1.2em;
+        }
+        
+        .badge {
+            display: inline-block;
+            padding: 8px 16px;
+            background: #4CAF50;
+            border-radius: 20px;
+            font-weight: bold;
+            margin: 10px;
+        }
+        
+        .info {
+            margin-top: 30px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            text-align: left;
+        }
+        
+        .info-item {
+            margin: 10px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .label {
+            font-weight: bold;
+        }
+        
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.7;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔵 Blue Environment</h1>
+        <div class="version">Version 1.0</div>
+        
+        <div class="status">
+            <span class="badge pulse">● ACTIVE</span>
+        </div>
+        
+        <p style="margin: 20px 0; font-size: 1.1em;">
+            This is the <strong>BLUE</strong> deployment environment running the original version of the application.
+        </p>
+        
+        <div class="info">
+            <div class="info-item">
+                <span class="label">Environment:</span>
+                <span>Blue</span>
+            </div>
+            <div class="info-item">
+                <span class="label">Version:</span>
+                <span>1.0.0</span>
+            </div>
+            <div class="info-item">
+                <span class="label">Status:</span>
+                <span style="color: #4CAF50;">✓ Healthy</span>
+            </div>
+            <div class="info-item">
+                <span class="label">Deployment:</span>
+                <span>Blue-Green Strategy</span>
+            </div>
+        </div>
+        
+        <p style="margin-top: 30px; opacity: 0.8; font-size: 0.9em;">
+            Deploy to GREEN to see the blue-green deployment in action!
+        </p>
+    </div>
+    
+    <script>
+        // Auto-refresh every 5 seconds to see deployment changes
+        setInterval(() => {
+            const timestamp = document.getElementById('timestamp');
+            if (timestamp) {
+                timestamp.textContent = new Date().toLocaleTimeString();
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
+
