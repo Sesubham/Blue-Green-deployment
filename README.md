@@ -60,6 +60,10 @@ Key DevOps Concepts Demonstrated
 ✅ Automation - Scripted deployment process
 ✅ Load Balancing - NGINX routing between environments
 
+<img width="861" height="399" alt="Image" src="https://github.com/user-attachments/assets/c77c9344-9ff7-47c2-8395-b85608487ff6" />
+
+<img width="803" height="243" alt="Image" src="https://github.com/user-attachments/assets/2c6133d2-7703-470d-b1cf-681a89ef8530" />
+
 License
 
 MIT License - Feel free to use for your portfolio!
